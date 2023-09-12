@@ -309,7 +309,7 @@
               font-size: 1.2rem;
               transition: font-weight .3s;
 
-              &:hover{
+              &:hover {
                 cursor: pointer;
                 font-weight: 700;
               }
@@ -341,7 +341,7 @@
                   flex-direction: row;
                   gap: 20px;
 
-                  &.active{
+                  &.active {
                     display: flex;
                   }
 
@@ -380,10 +380,11 @@
           background-color: colors.$product-color;
           transition: background-color .3s;
 
-          &:hover{
+          &:hover {
             background-color: colors.$product-color-darker;
           }
         }
+
 
         .top-nav-button a {
           width: 100%;
@@ -736,7 +737,7 @@
 
       p {
         margin: 10px 0;
-        @include mixins.paragraph-text-mobile;
+        @include mixins.paragraph-text;
       }
     }
 
@@ -1541,7 +1542,7 @@
 
     p {
       margin: 50px 0;
-      @include mixins.paragraph-text-mobile;
+      @include mixins.paragraph-text;
       font-weight: 400;
     }
 
@@ -2640,7 +2641,7 @@
 
             p {
               margin: 10px 0 0 0;
-              @include mixins.paragraph-text-mobile
+              @include mixins.paragraph-text;
             }
           }
         }
