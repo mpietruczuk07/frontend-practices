@@ -307,9 +307,11 @@
               height: 100%;
               margin: 10px 20px;
               font-size: 1.2rem;
+              transition: font-weight .3s;
 
-              a:hover {
+              &:hover{
                 cursor: pointer;
+                font-weight: 700;
               }
 
               &.dropdown-parent {
@@ -376,6 +378,11 @@
           height: 100%;
           display: flex;
           background-color: colors.$product-color;
+          transition: background-color .3s;
+
+          &:hover{
+            background-color: colors.$product-color-darker;
+          }
         }
 
         .top-nav-button a {
@@ -530,7 +537,7 @@
       .overview-section-header {
         margin: 0 0 1em 0;
         padding: 0 0 80px 0;
-        @include mixins.big-headline-text-mobile($color: colors.$product-color);
+        @include mixins.big-headline-text($color: colors.$product-color);
       }
 
       .img-wrapper {
@@ -622,7 +629,7 @@
           flex-direction: column;
 
           .overview-section-header {
-            @include mixins.big-headline-text-mobile($font-size: 5rem, $color: colors.$product-color, $line-height: 5.5rem);
+            @include mixins.big-headline-text($font-size: 5rem, $color: colors.$product-color, $line-height: 5.5rem);
           }
 
           .overview-section-paragraph {
@@ -689,7 +696,7 @@
           width: 50%;
 
           .overview-section-header {
-            @include mixins.big-headline-text-mobile($font-size: 7rem, $color: colors.$product-color, $line-height: 8rem);
+            @include mixins.big-headline-text($font-size: 7rem, $color: colors.$product-color, $line-height: 8rem);
           }
 
           .download-links {
@@ -724,7 +731,7 @@
 
       h2 {
         margin: 20px 0;
-        @include mixins.header-h2-mobile;
+        @include mixins.header-h2;
       }
 
       p {
@@ -742,7 +749,7 @@
     @include breakpoints.mobile {
       .overview-mobile {
         .overview-section-header {
-          @include mixins.big-headline-text-mobile($font-size: 3.8rem, $color: colors.$product-color);
+          @include mixins.big-headline-text($font-size: 3.8rem, $color: colors.$product-color);
         }
 
         .get-app {
@@ -804,7 +811,7 @@
     @include breakpoints.mobile-landscape {
       .overview-mobile {
         .overview-section-header {
-          @include mixins.big-headline-text-mobile($font-size: 4.2rem, $color: colors.$product-color);
+          @include mixins.big-headline-text($font-size: 4.2rem, $color: colors.$product-color);
         }
 
         .get-app {
@@ -840,7 +847,7 @@
 
           h2 {
             margin: 20px 0;
-            @include mixins.header-h2-mobile($font-size: 2.9rem);
+            @include mixins.header-h2($font-size: 2.9rem);
           }
 
           p {
@@ -855,7 +862,7 @@
       .overview-mobile {
         .overview-section-header {
           margin: 10px 0 0 0;
-          @include mixins.big-headline-text-mobile($font-size: 5rem, $color: colors.$product-color);
+          @include mixins.big-headline-text($font-size: 5rem, $color: colors.$product-color);
         }
 
         .img-wrapper {
@@ -881,7 +888,7 @@
           .overview-feature {
             h2 {
               margin: 20px 0;
-              @include mixins.header-h2-mobile($font-size: 3.2rem);
+              @include mixins.header-h2($font-size: 3.2rem);
             }
 
             p {
@@ -902,7 +909,7 @@
 
           h2 {
             margin: 20px 0;
-            @include mixins.header-h2-mobile($font-size: 2.8rem);
+            @include mixins.header-h2($font-size: 2.8rem);
           }
 
           p {
@@ -941,10 +948,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        
+        &:hover{
+          cursor: pointer;
+        }
 
         h3 {
           margin: 30px 0 15px 0;
-          @include mixins.header-h3-mobile($font-size: 1.9rem);
+          @include mixins.header-h3($font-size: 1.9rem);
         }
 
         p {
@@ -959,7 +970,7 @@
           margin: 0 50px;
 
           h3 {
-            @include mixins.header-h3-mobile($font-size: 2.2rem);
+            @include mixins.header-h3($font-size: 2.2rem);
           }
 
           p {
@@ -975,7 +986,7 @@
           margin: 0 30px;
 
           h3 {
-            @include mixins.header-h3-mobile($font-size: 2.3rem);
+            @include mixins.header-h3($font-size: 2.3rem);
           }
 
           p {
@@ -991,7 +1002,7 @@
           margin: 0 30px;
 
           h3 {
-            @include mixins.header-h3-mobile($font-size: 2.3rem);
+            @include mixins.header-h3($font-size: 2.3rem);
           }
 
           p {
@@ -1018,7 +1029,7 @@
           }
 
           h3 {
-            @include mixins.header-h3-mobile($font-size: 2rem);
+            @include mixins.header-h3($font-size: 2rem);
           }
 
           p {
@@ -1088,7 +1099,7 @@
         .wrapper {
           h1 {
             margin: 70px 0 0 0;
-            @include mixins.big-headline-text-mobile($font-size: 3.6rem, $color: colors.$card-background-color);
+            @include mixins.big-headline-text($font-size: 3.6rem, $color: colors.$card-background-color);
           }
 
           p {
@@ -1115,7 +1126,7 @@
         .features-section-body-bg-color {
           .wrapper {
             h1 {
-              @include mixins.big-headline-text-mobile($font-size: 3.8rem, $color: colors.$card-background-color);
+              @include mixins.big-headline-text($font-size: 3.8rem, $color: colors.$card-background-color);
             }
           }
         }
@@ -1153,7 +1164,7 @@
         .features-section-body-bg-color {
           .wrapper {
             h1 {
-              @include mixins.big-headline-text-mobile($font-size: 4.2rem, $color: colors.$card-background-color);
+              @include mixins.big-headline-text($font-size: 4.2rem, $color: colors.$card-background-color);
             }
 
             p {
@@ -1186,7 +1197,7 @@
         .features-section-body-bg-color {
           .wrapper {
             h1 {
-              @include mixins.big-headline-text-mobile($font-size: 5rem, $color: colors.$card-background-color, $line-height: 5rem);
+              @include mixins.big-headline-text($font-size: 5rem, $color: colors.$card-background-color, $line-height: 5rem);
             }
           }
         }
@@ -1227,7 +1238,7 @@
 
             h1 {
               width: 50%;
-              @include mixins.big-headline-text-mobile($font-size: 4.2rem, $color: colors.$card-background-color, $line-height: 5rem);
+              @include mixins.big-headline-text($font-size: 4.2rem, $color: colors.$card-background-color, $line-height: 5rem);
             }
 
             p {
@@ -1274,7 +1285,7 @@
 
             h1 {
               width: 65%;
-              @include mixins.big-headline-text-mobile($font-size: 7rem, $color: colors.$card-background-color, $line-height: 8rem);
+              @include mixins.big-headline-text($font-size: 7rem, $color: colors.$card-background-color, $line-height: 8rem);
             }
 
             p {
@@ -1302,7 +1313,7 @@
   .system-requirements-section {
     h2 {
       margin: 40px 0 20px 0;
-      @include mixins.header-h2-mobile;
+      @include mixins.header-h2;
     }
 
     p {
@@ -1311,7 +1322,7 @@
 
     @include breakpoints.mobile {
       h2 {
-        @include mixins.header-h2-mobile($font-size: 2.8rem);
+        @include mixins.header-h2($font-size: 2.8rem);
       }
 
       p {
@@ -1321,7 +1332,7 @@
 
     @include breakpoints.mobile-landscape {
       h2 {
-        @include mixins.header-h2-mobile($font-size: 2.9rem);
+        @include mixins.header-h2($font-size: 2.9rem);
       }
 
       p {
@@ -1331,7 +1342,7 @@
 
     @include breakpoints.mobile-landscape {
       h2 {
-        @include mixins.header-h2-mobile($font-size: 3.1rem)
+        @include mixins.header-h2($font-size: 3.1rem)
       }
 
       p {
@@ -1347,7 +1358,7 @@
         column-gap: 50px;
 
         h2 {
-          @include mixins.header-h2-mobile($font-size: 2.8rem)
+          @include mixins.header-h2($font-size: 2.8rem)
         }
 
         p {
@@ -1370,7 +1381,7 @@
 
         h3 {
           margin: 30px 0 0 0;
-          @include mixins.header-h3-mobile;
+          @include mixins.header-h3;
         }
 
         p {
@@ -1411,7 +1422,7 @@
       .wrapper {
         .mobile {
           h3 {
-            @include mixins.header-h3-mobile($font-size: 1.6rem);
+            @include mixins.header-h3($font-size: 1.6rem);
           }
 
           p {
@@ -1425,7 +1436,7 @@
       .wrapper {
         .mobile {
           h3 {
-            @include mixins.header-h3-mobile($font-size: 1.8rem);
+            @include mixins.header-h3($font-size: 1.8rem);
           }
 
           p {
@@ -1444,7 +1455,7 @@
       .wrapper {
         .mobile {
           h3 {
-            @include mixins.header-h3-mobile($font-size: 2.1rem);
+            @include mixins.header-h3($font-size: 2.1rem);
           }
 
           p {
@@ -1478,7 +1489,7 @@
 
           h3 {
             margin: 0 40px 0 5px;
-            @include mixins.header-h3-mobile($font-size: 1.8rem);
+            @include mixins.header-h3($font-size: 1.8rem);
           }
 
           p {
@@ -1525,7 +1536,7 @@
 
     h1 {
       margin: 100px 0 0 0;
-      @include mixins.big-headline-text-mobile($line-height: 4.6rem);
+      @include mixins.big-headline-text($line-height: 4.6rem);
     }
 
     p {
@@ -1543,7 +1554,7 @@
 
     h3 {
       margin: 40px 0 0 0;
-      @include mixins.header-h3-mobile;
+      @include mixins.header-h3;
     }
 
     p:nth-of-type(2) {
@@ -1553,11 +1564,11 @@
 
     @include breakpoints.mobile {
       h1 {
-        @include mixins.big-headline-text-mobile($font-size: 3.8rem, $line-height: 4.6rem);
+        @include mixins.big-headline-text($font-size: 3.8rem, $line-height: 4.6rem);
       }
 
       h3 {
-        @include mixins.header-h3-mobile($font-size: 1.6rem);
+        @include mixins.header-h3($font-size: 1.6rem);
       }
     }
 
@@ -1569,7 +1580,7 @@
 
     @include breakpoints.mobile-landscape {
       h1 {
-        @include mixins.big-headline-text-mobile($font-size: 4.2rem, $line-height: 4.6rem);
+        @include mixins.big-headline-text($font-size: 4.2rem, $line-height: 4.6rem);
       }
 
       p {
@@ -1582,13 +1593,13 @@
       }
 
       h3 {
-        @include mixins.header-h3-mobile($font-size: 1.8rem);
+        @include mixins.header-h3($font-size: 1.8rem);
       }
     }
 
     @include breakpoints.tablet {
       h1 {
-        @include mixins.big-headline-text-mobile($font-size: 5rem, $line-height: 5rem);
+        @include mixins.big-headline-text($font-size: 5rem, $line-height: 5rem);
       }
 
       p {
@@ -1600,7 +1611,7 @@
       }
 
       h3 {
-        @include mixins.header-h3-mobile($font-size: 2rem);
+        @include mixins.header-h3($font-size: 2rem);
       }
     }
 
@@ -1614,7 +1625,7 @@
         position: relative;
 
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.6rem, $line-height: 5.5rem);
+          @include mixins.big-headline-text($font-size: 4.6rem, $line-height: 5.5rem);
         }
 
         p {
@@ -1662,7 +1673,7 @@
 
       .desktop {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 7rem, $line-height: 8rem);
+          @include mixins.big-headline-text($font-size: 7rem, $line-height: 8rem);
         }
 
         img {
@@ -1699,7 +1710,7 @@
       margin: 50px 0 0 0;
 
       h1 {
-        @include mixins.big-headline-text-mobile($font-size: 3.6rem, $line-height: 4.6rem);
+        @include mixins.big-headline-text($font-size: 3.6rem, $line-height: 4.6rem);
       }
 
       img {
@@ -1719,7 +1730,7 @@
     @include breakpoints.mobile {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 3.8rem, $line-height: 4.6rem);
+          @include mixins.big-headline-text($font-size: 3.8rem, $line-height: 4.6rem);
         }
 
         img {
@@ -1735,7 +1746,7 @@
     @include breakpoints.mobile-landscape {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.2rem, $line-height: 4.6rem);
+          @include mixins.big-headline-text($font-size: 4.2rem, $line-height: 4.6rem);
         }
 
         img {
@@ -1751,7 +1762,7 @@
     @include breakpoints.tablet {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 5rem, $line-height: 5rem);
+          @include mixins.big-headline-text($font-size: 5rem, $line-height: 5rem);
         }
 
         img {
@@ -1783,7 +1794,7 @@
             margin: 30px 0 0 0;
 
             h1 {
-              @include mixins.big-headline-text-mobile($font-size: 4.6rem);
+              @include mixins.big-headline-text($font-size: 4.6rem);
             }
 
             p {
@@ -1839,7 +1850,7 @@
 
     .mobile {
       h1 {
-        @include mixins.big-headline-text-mobile($line-height: 4.6rem);
+        @include mixins.big-headline-text($line-height: 4.6rem);
       }
 
       p {
@@ -1864,7 +1875,7 @@
     @include breakpoints.mobile {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 3.8rem, $line-height: 4.6rem)
+          @include mixins.big-headline-text($font-size: 3.8rem, $line-height: 4.6rem)
         }
 
         p {
@@ -1876,7 +1887,7 @@
     @include breakpoints.mobile-landscape {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.2rem, $line-height: 5rem)
+          @include mixins.big-headline-text($font-size: 4.2rem, $line-height: 5rem)
         }
 
         p {
@@ -1898,7 +1909,7 @@
     @include breakpoints.tablet {
       .mobile {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 5rem, $line-height: 5rem)
+          @include mixins.big-headline-text($font-size: 5rem, $line-height: 5rem)
         }
 
         p {
@@ -1917,7 +1928,7 @@
         position: relative;
 
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.6rem, $line-height: 5.5rem);
+          @include mixins.big-headline-text($font-size: 4.6rem, $line-height: 5.5rem);
         }
 
         img {
@@ -1954,34 +1965,6 @@
             @include mixins.paragraph-text($font-size: 1.2rem, $line-height: 2rem);
           }
         }
-
-
-        //.wrapper:nth-of-type(1) {
-        //  display: flex;
-        //
-        //  .left {
-        //    width: 55%;
-        //    padding: 10em 0 0 0;
-        //  }
-        //}
-        //
-        //.wrapper:nth-of-type(2) {
-        //  display: flex;
-        //  justify-content: flex-start;
-        //  align-items: flex-start;
-        //  flex-direction: row;
-        //  column-gap: 80px;
-        //
-        //  .left, .right {
-        //    h3 {
-        //      margin: 0;
-        //    }
-        //
-        //    p {
-        //      margin: 20px 0 0 0;
-        //    }
-        //  }
-        //}
       }
     }
 
@@ -1990,7 +1973,7 @@
         margin: 100px 0 0 0;
 
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 7rem, $line-height: 8rem);
+          @include mixins.big-headline-text($font-size: 7rem, $line-height: 8rem);
         }
 
         .wrapper:nth-of-type(1) {
@@ -2027,7 +2010,7 @@
 
         h1 {
           margin: 40px 0 0 0;
-          @include mixins.big-headline-text-mobile($line-height: 4.6rem);
+          @include mixins.big-headline-text($line-height: 4.6rem);
         }
 
         p {
@@ -2058,7 +2041,7 @@
       .mobile {
         .wrapper {
           h1 {
-            @include mixins.big-headline-text-mobile($font-size: 3.8rem, $line-height: 4.6rem)
+            @include mixins.big-headline-text($font-size: 3.8rem, $line-height: 4.6rem)
           }
 
           p {
@@ -2082,7 +2065,7 @@
       .mobile {
         .wrapper {
           h1 {
-            @include mixins.big-headline-text-mobile($font-size: 4.2rem)
+            @include mixins.big-headline-text($font-size: 4.2rem)
           }
 
           p {
@@ -2105,7 +2088,7 @@
       .mobile {
         .wrapper {
           h1 {
-            @include mixins.big-headline-text-mobile($font-size: 5rem, $line-height: 5rem)
+            @include mixins.big-headline-text($font-size: 5rem, $line-height: 5rem)
           }
 
           p {
@@ -2135,7 +2118,7 @@
 
             h1 {
               padding: 40px 0;
-              @include mixins.big-headline-text-mobile($font-size: 4.6rem, $line-height: 5rem)
+              @include mixins.big-headline-text($font-size: 4.6rem, $line-height: 5rem)
             }
 
             p {
@@ -2186,7 +2169,7 @@
     .wrapper {
       h1 {
         margin: 80px 0 0 0;
-        @include mixins.big-headline-text-mobile($line-height: 4.6rem);
+        @include mixins.big-headline-text($line-height: 4.6rem);
       }
 
       .accordion {
@@ -2201,7 +2184,7 @@
             text-align: left;
             background-color: colors.$card-background-color;
             border: none;
-            @include mixins.header-h3-mobile;
+            @include mixins.header-h3;
 
             &:hover{
               cursor: pointer;
@@ -2229,13 +2212,13 @@
     @include breakpoints.mobile {
       .wrapper {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 3.8rem, $line-height: 4.6rem);
+          @include mixins.big-headline-text($font-size: 3.8rem, $line-height: 4.6rem);
         }
 
         .accordion {
           .accordion-box {
             .accordion-btn {
-              @include mixins.header-h3-mobile($font-size: 1.6rem);
+              @include mixins.header-h3($font-size: 1.6rem);
             }
           }
         }
@@ -2249,13 +2232,13 @@
     @include breakpoints.mobile-landscape {
       .wrapper {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.2rem, $line-height: 4.6rem);
+          @include mixins.big-headline-text($font-size: 4.2rem, $line-height: 4.6rem);
         }
 
         .accordion {
           .accordion-box {
             .accordion-btn {
-              @include mixins.header-h3-mobile($font-size: 1.8rem);
+              @include mixins.header-h3($font-size: 1.8rem);
             }
           }
         }
@@ -2269,13 +2252,13 @@
     @include breakpoints.tablet {
       .wrapper {
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 5rem, $line-height: 5rem);
+          @include mixins.big-headline-text($font-size: 5rem, $line-height: 5rem);
         }
 
         .accordion {
           .accordion-box {
             .accordion-btn {
-              @include mixins.header-h3-mobile($font-size: 2rem);
+              @include mixins.header-h3($font-size: 2rem);
             }
           }
         }
@@ -2303,13 +2286,13 @@
         }
 
         h1 {
-          @include mixins.big-headline-text-mobile($font-size: 4.6rem, $line-height: 5.5rem);
+          @include mixins.big-headline-text($font-size: 4.6rem, $line-height: 5.5rem);
         }
 
         .accordion {
           .accordion-box {
             .accordion-btn {
-              @include mixins.header-h3-mobile($font-size: 1.6rem);
+              @include mixins.header-h3($font-size: 1.6rem);
             }
           }
         }
@@ -2329,15 +2312,37 @@
       align-items: center;
 
       button {
+        position: relative;
         margin-right: 36px;
         padding: 0.25em 0;
         border: none;
         background-color: colors.$card-background-color;
         @include mixins.paragraph-text;
+        transition: font-weight .3s;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: colors.$secondary-color;
+          transition: width .3s;
+        }
+
+        &:hover::after {
+          width: 50%;
+        }
       }
 
       .btn-active {
         font-weight: bold;
+
+        &::after{
+          width: 50%;
+        }
       }
     }
 
@@ -2625,12 +2630,12 @@
             h3 {
               margin: 40px 0 0 0;
               padding: 0;
-              @include mixins.header-h3-mobile($font-size: 1.9rem);
+              @include mixins.header-h3($font-size: 1.9rem);
             }
 
             h1 {
               margin: -12px 0 0 0;
-              @include mixins.big-headline-text-mobile($color: colors.$product-color);
+              @include mixins.big-headline-text($color: colors.$product-color);
             }
 
             p {
@@ -2656,11 +2661,11 @@
               background-size: 85%;
 
               h3 {
-                @include mixins.header-h3-mobile($font-size: 2.1rem);
+                @include mixins.header-h3($font-size: 2.1rem);
               }
 
               h1 {
-                @include mixins.big-headline-text-mobile($font-size: 3.8rem, $color: colors.$product-color);
+                @include mixins.big-headline-text($font-size: 3.8rem, $color: colors.$product-color);
               }
 
               p {
@@ -2695,11 +2700,11 @@
               background-size: 80%;
 
               h3 {
-                @include mixins.header-h3-mobile($font-size: 2.3rem);
+                @include mixins.header-h3($font-size: 2.3rem);
               }
 
               h1 {
-                @include mixins.big-headline-text-mobile($font-size: 4.2rem, $color: colors.$product-color);
+                @include mixins.big-headline-text($font-size: 4.2rem, $color: colors.$product-color);
               }
 
               p {
@@ -2717,16 +2722,16 @@
           .card {
             .section-product-family-body {
               height: 700px;
-              background-position: top -450px center;
+              background-position: top -350px center;
               background-size: 80%;
 
               h3 {
-                @include mixins.header-h3-mobile($font-size: 2.5rem);
+                @include mixins.header-h3($font-size: 2.5rem);
               }
 
               h1 {
                 margin: -8px 0 0 0;
-                @include mixins.big-headline-text-mobile($font-size: 5rem, $color: colors.$product-color);
+                @include mixins.big-headline-text($font-size: 5rem, $color: colors.$product-color);
               }
 
               p {
@@ -2746,6 +2751,8 @@
       }
 
       .desktop {
+        display: block;
+
         .product-family-card-wrapper {
           height: 700px;
 
@@ -2767,12 +2774,12 @@
               flex-direction: column;
 
               h3 {
-                @include mixins.header-h3-mobile($font-size: 2.2rem);
+                @include mixins.header-h3($font-size: 2.2rem);
               }
 
               h1 {
                 margin: -8px 0 0 0;
-                @include mixins.big-headline-text-mobile($font-size: 4.2rem, $color: colors.$product-color);
+                @include mixins.big-headline-text($font-size: 4.2rem, $color: colors.$product-color);
               }
 
               p {
@@ -2814,11 +2821,17 @@
     .footer-link {
       margin: 8px 0;
       font-weight: 300;
+      transition: color .3s;
     }
 
     .footer-link:first-of-type {
       margin-bottom: 30px;
       font-weight: 700;
+    }
+
+    .footer-link:hover:not(:first-of-type){
+      cursor: pointer;
+      color: colors.$gray-border-color-light;
     }
   }
 
