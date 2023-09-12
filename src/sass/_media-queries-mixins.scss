@@ -1,0 +1,50 @@
+$mobile-min-width: 360px;
+$bigger-mobile-min-width: 410px;
+$mobile-landscape-min-width: 576px;
+$tablet-width: 768px;
+$laptop-min-width: 992px;
+$desktop-min-width: 1200px;
+$desktop-large-min-width: 1400px;
+
+//more than samsung galaxy fold
+@mixin mobile {
+  @media (min-width: $mobile-min-width) {
+    @content;
+  }
+}
+
+@mixin bigger-mobile{
+  @media (min-width: $bigger-mobile-min-width){
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (min-width: $mobile-landscape-min-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop-min-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin large-desktop{
+  @media (min-width: $desktop-large-min-width){
+    @content;
+  }
+}
