@@ -1,0 +1,91 @@
+@use 'colors' as colors;
+
+@mixin big-headline-text {
+  font-family: Poppins, sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+@mixin big-headline-text-mobile($font-size: 3.6rem, $font-weight: 700, $line-height: 5rem, $color: colors.$text-color) {
+  font-family: Poppins, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin description-text {
+  font-family: Roboto, sans-serif;
+  font-size: 3rem;
+  line-height: 40px;
+  color: colors.$text-color;
+}
+
+@mixin header-h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  color: colors.$text-color;
+}
+
+@mixin header-h2-mobile($font-size: 2.7rem, $line-height: 36px, $color: colors.$text-color) {
+  font-family: Poppins, sans-serif;
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph-text($font-size: 1.5rem, $font-weight: 300, $line-height: 2.5rem, $color: colors.$text-color) {
+  font-family: Roboto, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph-text-mobile {
+  @include paragraph-text;
+  font-size: 1.5rem;
+}
+
+@mixin section-header($font-size: 1.4rem, $font-weight: 400, $color: colors.$text-color) {
+  font-family: Roboto, sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin header-h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: colors.$text-color;
+}
+
+
+@mixin header-h3-mobile($font-size: 1.5rem, $color: colors.$text-color) {
+  font-family: Poppins, sans-serif;
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: $color;
+}
+
+@mixin blue-button {
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+  padding: 16px 36px;
+  border: none;
+  background-color: colors.$product-color;
+  color: colors.$card-background-color;
+  transition: background-color .3s;
+
+  &:hover{
+    cursor: pointer;
+    background-color: colors.$product-color-darker;
+  }
+}
